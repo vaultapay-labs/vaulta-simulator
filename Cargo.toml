@@ -1,0 +1,92 @@
+[package]
+name = "vaulta-simulator"
+version = "0.1.0"
+edition = "2021"
+description = "High-fidelity capital routing simulator with Monte Carlo stress testing and backtesting engine for Vaulta Protocol"
+authors = ["Vaulta Protocol"]
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/vaultapay/vaulta-simulator"
+homepage = "https://vaultapay.com"
+documentation = "https://docs.vaultapay.com/vaulta-simulator"
+
+[dependencies]
+# Core async runtime
+tokio = { version = "1.35", features = ["full"] }
+async-trait = "0.1"
+
+# Numerical computing and statistics
+ndarray = "0.15"
+ndarray-rand = "0.15"
+statrs = "0.16"
+rand = "0.8"
+rand_distr = "0.4"
+rayon = "1.8"
+
+# Time and date handling
+chrono = { version = "0.4", features = ["serde"] }
+time = "0.3"
+
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+bincode = "1.3"
+
+# Error handling
+thiserror = "1.0"
+anyhow = "1.0"
+
+# Logging
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "json"] }
+
+# CLI
+clap = { version = "4.4", features = ["derive"] }
+
+# Decimal precision for financial calculations
+rust_decimal = { version = "1.33", features = ["serde-with-str"] }
+rust_decimal_macros = "1.33"
+
+# CSV handling
+csv = "1.3"
+
+# Progress bars
+indicatif = "0.17"
+
+# Parallel processing
+crossbeam = "0.8"
+
+# Memory-efficient collections
+smallvec = "1.11"
+
+# Hash and crypto utilities
+sha2 = "0.10"
+blake3 = "1.5"
+
+# Configuration
+config = "0.14"
+
+# HTTP client for fetching market data
+reqwest = { version = "0.11", features = ["json", "rustls-tls"] }
+
+# Database for storing simulation results
+sqlx = { version = "0.7", features = ["runtime-tokio-rustls", "sqlite", "chrono", "uuid"] }
+uuid = { version = "1.6", features = ["v4", "serde"] }
+
+[dev-dependencies]
+criterion = { version = "0.5", features = ["html_reports"] }
+proptest = "1.4"
+quickcheck = "1.0"
+
+[[bench]]
+name = "monte_carlo_bench"
+harness = false
+
+[[bench]]
+name = "backtest_bench"
+harness = false
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"
