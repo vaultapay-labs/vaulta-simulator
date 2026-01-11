@@ -392,30 +392,3 @@ This project is licensed under either of:
 
 at your option.
 
-## 🙏 Acknowledgments
-
-- Built for the [Vaulta Protocol](https://vaultapay.com)
-- Inspired by institutional-grade risk management systems
-- Uses best practices from quantitative finance
-
-## 📞 Support
-
-- **Documentation**: [docs.vaultapay.com](https://docs.vaultapay.com)
-- **Issues**: [GitHub Issues](https://github.com/vaultapay/vaulta-simulator/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/vaultapay/vaulta-simulator/discussions)
-
-## 🔗 Related Projects
-
-- [vaulta-anchor-core](https://github.com/vaultapay/vaulta-anchor-core) - Core smart vault programs
-- [vaulta-zk-solvency](https://github.com/vaultapay/vaulta-zk-solvency) - Zero-knowledge solvency proofs
-- [vaulta-ai-router](https://github.com/vaultapay/vaulta-ai-router) - AI capital routing engine
-
----
-
-<div align="center">
-
-**Built with ❤️ for the Vaulta Protocol**
-
-[Website](https://vaultapay.com) • [Documentation](https://docs.vaultapay.com) • [Twitter](https://twitter.com/vaultapay)
-
-</div>
