@@ -5,9 +5,8 @@ edition = "2021"
 description = "High-fidelity capital routing simulator with Monte Carlo stress testing and backtesting engine for Vaulta Protocol"
 authors = ["Vaulta Protocol"]
 license = "MIT OR Apache-2.0"
-repository = "https://github.com/vaultapay/vaulta-simulator"
-homepage = "https://vaultapay.com"
-documentation = "https://docs.vaultapay.com/vaulta-simulator"
+repository = "https://github.com/vaultapay-labs/vaulta-simulator"
+homepage = "https://vaultapay.app"
 
 [dependencies]
 # Core async runtime
